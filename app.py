@@ -4,7 +4,6 @@ import json
 
 app = Flask(__name__)
 
-# Connect to database
 def get_db_connection():
     conn = sqlite3.connect('users.db')
     conn.row_factory = sqlite3.Row  # To return dict-like rows
