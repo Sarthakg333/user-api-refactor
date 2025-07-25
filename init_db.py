@@ -1,10 +1,8 @@
 import sqlite3
 
-# Connect to the database (will create users.db if not exists)
 conn = sqlite3.connect('users.db')
 cursor = conn.cursor()
 
-# Create users table
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -14,7 +12,6 @@ CREATE TABLE IF NOT EXISTS users (
 )
 ''')
 
-# Insert sample data
 sample_users = [
     ('John Doe', 'john@example.com', 'password123'),
     ('Jane Smith', 'jane@example.com', 'secret456'),
